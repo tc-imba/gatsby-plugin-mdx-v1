@@ -1,5 +1,7 @@
 ![Logo](./img/gatsby-mdx.png)
 
+**This is a fork of the official gatsby-plugin-mdx plugin that supports MDX v1 on Gatsby v5.**
+
 > `gatsby-plugin-mdx` is the official integration for using [MDX](https://mdxjs.com)
 > with [Gatsby](https://www.gatsbyjs.com).
 

@@ -6,7 +6,7 @@ const fs = require(`fs`)
 
 const {
   onCreateNode,
-  unstable_shouldOnCreateNode,
+  shouldOnCreateNode,
 } = require(`./gatsby/on-create-node`)
 
 /**
@@ -17,7 +17,7 @@ exports.createSchemaCustomization = require(`./gatsby/create-schema-customizatio
 /**
  * Check whether to create Mdx nodes from MDX files.
  */
-exports.unstable_shouldOnCreateNode = unstable_shouldOnCreateNode
+exports.shouldOnCreateNode = shouldOnCreateNode
 
 /**
  * Create Mdx nodes from MDX files.

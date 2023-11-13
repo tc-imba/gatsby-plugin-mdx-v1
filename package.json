@@ -1,22 +1,21 @@
 {
-  "name": "gatsby-plugin-mdx",
-  "version": "3.21.0-next.1",
-  "description": "MDX integration for Gatsby",
+  "name": "gatsby-plugin-mdx-v1",
+  "version": "1.0.0",
+  "description": "MDX integration for Gatsby (MDX v1)",
   "main": "index.js",
   "license": "MIT",
-  "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx#readme",
+  "homepage": "https://github.com/tc-imba/gatsby-plugin-mdx-v1",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby.git",
-    "directory": "packages/gatsby-plugin-mdx"
+    "url": "https://github.com/tc-imba/gatsby-plugin-mdx-v1"
   },
   "peerDependencies": {
     "@mdx-js/mdx": "^1.0.0",
     "@mdx-js/react": "^1.0.0",
-    "gatsby": "^4.0.0-next",
+    "gatsby": "^5.0.0",
     "react": "^16.9.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.9.0 || ^17.0.0 || ^18.0.0"
   },
@@ -61,6 +60,9 @@
     "unist-util-visit": "^1.4.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "cross-env": "^7.0.3",
+    "del-cli": "^5.1.0",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "gatsby-plugin-utils": "^3.15.0-next.1",

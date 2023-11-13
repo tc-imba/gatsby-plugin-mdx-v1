@@ -13,14 +13,14 @@ const { findImports } = require(`../utils/gen-mdx`)
 
 const contentDigest = val => createContentDigest(val)
 
-function unstable_shouldOnCreateNode({ node }, pluginOptions) {
+function shouldOnCreateNode({ node }, pluginOptions) {
   const options = defaultOptions(pluginOptions)
 
-  return _unstable_shouldOnCreateNode({ node }, options)
+  return _shouldOnCreateNode({ node }, options)
 }
 
 // eslint-disable-next-line camelcase
-function _unstable_shouldOnCreateNode({ node }, options) {
+function _shouldOnCreateNode({ node }, options) {
   // options check to stop transformation of the node
   if (options.shouldBlockNodeFromTransformation(node)) {
     return false
@@ -31,12 +31,12 @@ function _unstable_shouldOnCreateNode({ node }, options) {
     : options.mediaTypes.includes(node.internal.mediaType)
 }
 
-module.exports.unstable_shouldOnCreateNode = unstable_shouldOnCreateNode
+module.exports.shouldOnCreateNode = shouldOnCreateNode
 
 async function onCreateNode(api, pluginOptions) {
   const options = defaultOptions(pluginOptions)
 
-  if (!_unstable_shouldOnCreateNode({ node: api.node }, options)) {
+  if (!_shouldOnCreateNode({ node: api.node }, options)) {
     return
   }
 
